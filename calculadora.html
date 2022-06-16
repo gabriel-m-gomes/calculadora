@@ -5,50 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
-    <h1>minha calculadora</h1>
+    <h1>calculadora</h1>
     
-    <div>
-        <button class = "number">0</button>
-        <button class = "number">1</button>
-        <button class = "number">2</button>
-        <button class = "number">3</button>
-        <button class = "number">4</button>
-        <button class = "number">5</button>
-        <button class = "number">6</button>
-        <button class = "number">7</button>
-        <button class = "number">8</button>
-        <button class = "number">9</button>
-
-
-    </div>
-
+    
     <!-- primeiro numero<br />
-    <input id="n1" type = "number"/><br />
-    segundo numero<br /> 
-    <input id="n2" type = "number"/><br /><br /> -->
+        <input id="n1" type = "number"/><br />
+        segundo numero<br /> 
+        <input id="n2" type = "number"/><br /><br /> -->
+        
+        <span id="n1"></span>
+        <span id="operacaoMatematica"></span>
+        <span id="n2"></span>
+        <span id="sinalDeIgual"></span>
+        <span id="total"></span> <br> <br>
+        
+        <button onclick="limparResultado()" id="limpar">limpar</button>
+        
+        <button id ="resultado">resultado</button> 
+        
+        
+        <button onclick ="somar()">somar</button>
+        <button onclick ="subtrair()">subtrair</button>
+        <button onclick ="multiplicar()">multiplicar</button>
+        <button onclick ="dividir()">dividir</button>
+        <br />
+        <br />  
+        
+        <div>
+            <div>
+                <button class = "number">1</button>
+                <button class = "number">2</button>
+                <button class = "number">3</button>
+            </div>
 
-        <p>valor 1 <span id="n1"></span></p> 
-        <p>valor 2 <span id="n2"></span></p>
-        o resultado é <span id="resultado"></span> <br> <br>
+            <div>
+                <button class = "number">4</button>
+                <button class = "number">5</button>
+                <button class = "number">6</button>
+            </div>
+            
+            <div>
+                <button class = "number">7</button>
+                <button class = "number">8</button>
+                <button class = "number">9</button>
+            </div>
+                
+            <button class = "number">0</button>
+    
+        </div>
 
-    <button onclick="limparResultado()" id="limpar">limpar</button>
-
-    <button onclick="resultado()" id="resultado">resultado</button>
-
-
-    <button onclick ="somar()">somar</button>
-    <button onclick ="subtrair()">subtrair</button>
-    <button onclick ="multiplicar()">multiplicar</button>
-    <button onclick ="dividir()">dividir</button>
-    <br />
-    <br />  
-   
-
+        
 
 
 
     <script src="calculadora.js"></script>
+    
 </body>
 </html>     

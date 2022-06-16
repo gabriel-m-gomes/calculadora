@@ -2,17 +2,62 @@
 
 var n1 = document.querySelector('#n1')
 var n2 = document.querySelector('#n2')
-var resultado = document.querySelector("#resultado")
-console.log(n1)
+var total = document.querySelector("#total")    
+var result = document.querySelector('#resultado')
+result.addEventListener("click",resultado)
+var operacaoMatematica = document.querySelector("#operacaoMatematica")
+var sinalDeIgual = document.querySelector('#sinalDeIgual')
+    
 
 function limparResultado(){
     primeiroValor = ""
     segundoValor = ""
     n1.innerHTML = "" 
     n2.innerHTML = ""
-    resultado.innerHTML = ""
+    total.innerHTML = ""
     trocar = true
+    operacaoMatematica.innerHTML = ""
+    sinalDeIgual.innerHTML = ""
 }
+
+
+
+function resultado(){
+    var subtotal = ""
+
+    sinalDeIgual.innerHTML = "="
+
+    if(operador == "+" ){
+       subtotal = Number(primeiroValor) + Number(segundoValor)  
+       total.innerHTML = subtotal
+
+
+    }
+
+    if(operador == "-"){
+        subtotal = Number(primeiroValor) - Number(segundoValor)
+        total.innerHTML = subtotal
+
+    }
+
+    if(operador == "*"){
+        subtotal = Number(primeiroValor) * Number(segundoValor)
+        total.innerHTML = subtotal
+    }
+
+    if(operador == "/"){
+        subtotal = Number(primeiroValor) / Number(segundoValor)
+        total.innerHTML = subtotal
+
+
+    }
+
+
+
+}
+
+    
+
 
 var trocar = true
 
@@ -23,23 +68,31 @@ function somar(){
 
     operador = "+" 
     trocar = false
+    operacaoMatematica.innerHTML = "+"
+    
 
 }
 
 function multiplicar(){
 
     operador = "*"
+    trocar = false
+    operacaoMatematica.innerHTML = "*"
 
 }
 
 function subtrair(){
     
     operador = "-"
+    trocar = false
+    operacaoMatematica.innerHTML = "-"
 }
 
 function dividir(){
    
     operador = "/"
+    trocar = false
+    operacaoMatematica.innerHTML = "/"
 }
 
 var numbers = document.querySelectorAll(".number")
@@ -53,7 +106,7 @@ var segundoValor = ""
 function addnumber(valor){
 
     if(trocar === true){
-        primeiroValor += valor 
+        primeiroValor = primeiroValor + valor
         n1.innerHTML = primeiroValor
     }
     else {
